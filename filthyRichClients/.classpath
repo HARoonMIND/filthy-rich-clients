@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src09-11"/>
+	<classpathentry excluding="filthyRichClients/chapter17/DynamicEffects/Bloom/BloomOpenGL.java" kind="src" path="src16-18"/>
+	<classpathentry kind="src" path="src12-13"/>
+	<classpathentry kind="src" path="src06-08"/>
+	<classpathentry kind="src" path="src03-05"/>
+	<classpathentry kind="src" path="src02"/>
+	<classpathentry kind="src" path="src14-15"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="lib/TimingFramework-1.0.jar" sourcepath="I:/lib-java/ui/timingframework/TimingFramework-1.0-src.zip"/>
+	<classpathentry kind="lib" path="lib/AnimatedTransitions-0.11.jar" sourcepath="I:/lib-java/ui/timingframework/AnimatedTransitions-0.11-src.zip"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
