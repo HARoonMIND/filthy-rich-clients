@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
-	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="src" path="src16.StaticEffects.Blur"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="lib" path="lib/TimingFramework.jar" sourcepath="I:/lib-java/ui/timingframework/TimingFramework-1.0-src.zip"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
