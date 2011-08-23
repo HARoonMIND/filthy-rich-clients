@@ -1,5 +1,6 @@
-import java.awt.*;
-import javax.swing.*;
+package swinghacks.ch01.JComponents.hack01;
+import javax.swing.ImageIcon;
+import javax.swing.JLabel;
 
 public class ImageLabel extends JLabel {
 

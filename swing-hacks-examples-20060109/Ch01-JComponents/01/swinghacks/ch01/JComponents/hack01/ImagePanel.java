@@ -1,5 +1,10 @@
-import java.awt.*;
-import javax.swing.*;
+package swinghacks.ch01.JComponents.hack01;
+import java.awt.Dimension;
+import java.awt.Graphics;
+import java.awt.Image;
+
+import javax.swing.ImageIcon;
+import javax.swing.JPanel;
 
 public class ImagePanel extends JPanel {
     

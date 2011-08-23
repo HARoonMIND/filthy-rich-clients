@@ -1,5 +1,9 @@
-import java.awt.*;
-import javax.swing.*;
+package swinghacks.ch01.JComponents.hack01;
+
+import java.awt.Insets;
+
+import javax.swing.ImageIcon;
+import javax.swing.JButton;
 
 public class ImageButton extends JButton {
 
