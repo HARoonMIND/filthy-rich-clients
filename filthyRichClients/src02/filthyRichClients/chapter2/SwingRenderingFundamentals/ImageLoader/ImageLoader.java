@@ -26,7 +26,7 @@ public class ImageLoader extends JFrame {
            public void actionPerformed(ActionEvent e) {
                String[] files = new String[] {
                    "Bodie_small.png", "Carmela_small.png",
-                   "Unknown.png", "Denied.png",
+//                   "Unknown.png", "Denied.png",
                    "Death Valley_small.png", "Lake_small.png"
                };
                new ImageLoadingWorker(log, viewer, files).execute();

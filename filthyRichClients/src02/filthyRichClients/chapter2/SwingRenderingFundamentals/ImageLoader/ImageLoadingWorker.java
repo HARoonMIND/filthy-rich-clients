@@ -52,8 +52,8 @@ public class ImageLoadingWorker extends SwingWorker<List<Image>, String> {
     List<Image> images = new ArrayList<Image>();
     for (String filename : filenames) {
       try {
-//        images.add(ImageIO.read(getClass().getResource(filename)));
-          images.add(ImageIO.read(new File(filename)));
+        images.add(ImageIO.read(getClass().getResource(filename)));
+//          images.add(ImageIO.read(new File(filename)));
         publish("Loaded " + filename);
       } catch (IOException ioe) {
         publish("Error loading " + filename);
