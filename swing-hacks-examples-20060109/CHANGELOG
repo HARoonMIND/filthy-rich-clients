@@ -1,0 +1,24 @@
+          Change log for "Swing Hacks" sample code download
+          -------------------------------------------------
+
+Jan. 9, 2006:
+* Hack 7: Replaced incorrect main() method with the one from the book
+* Hack 14: Added missing image
+* Hack 16: Added missing images
+* Hack 26: Removed superfluous package statement
+* Hack 37: Added handling of missing "configuration.props" file (see book
+           errata page at http://www.oreilly.com/catalog/swinghks/errata/ )
+* Hack 47: Added missing images
+* Hack 63: Added missing images
+* Hack 64: Added missing images
+* Hack 70: Added index.html for convenience (see book for security gotchas
+           on running any applet, however)
+* Hack 75: Removed superfluous package statements
+* Hack 75: Uses a BufferedInputStream for the AudioInputStream to avoid
+           "mark/reset not supported" errors on some JVMs (see book
+           errata page at http://www.oreilly.com/catalog/swinghks/errata/ )
+* Hack 85: Added manifest.txt file
+* Hack 99: Removed two-line debug dialog (not in book, but appeared in
+           last code example zip)
+* Hack 100: Added note that this one-line hack has no sample class
+

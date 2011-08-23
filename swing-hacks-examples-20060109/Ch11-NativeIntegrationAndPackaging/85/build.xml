@@ -1,0 +1,16 @@
+<project name="jar-resource-loading" default="all" basedir=".">
+
+  <target name="compile">
+    <javac srcdir="." destdir="."/>
+  </target>
+
+  <target name="package">
+    <jar destfile="buh.jar"
+         basedir="."
+         includes="*.class, images/*, sounds/*"
+         manifest="manifest.txt" />
+  </target>    
+
+  <target name="all" depends="compile, package" />
+
+</project>
