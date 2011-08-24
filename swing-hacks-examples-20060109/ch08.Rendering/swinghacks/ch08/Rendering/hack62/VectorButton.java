@@ -1,3 +1,4 @@
+package swinghacks.ch08.Rendering.hack62;
 import java.awt.*;
 import java.awt.geom.*;
 import java.awt.event.*;

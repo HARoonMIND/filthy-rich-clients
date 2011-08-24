@@ -1,3 +1,4 @@
+package swinghacks.ch08.Rendering.hack61;
 import java.io.*;
 import java.awt.*;
 import javax.swing.*;

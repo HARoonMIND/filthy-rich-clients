@@ -1,3 +1,4 @@
+package swinghacks.ch08.Rendering.hack58;
 import java.awt.event.*;
 import java.awt.*;
 import javax.swing.*;
@@ -61,7 +62,7 @@ public class WindowBlocker extends JComponent
         comp.add("South",status);
 
         frame.pack();
-        frame.show();
+        frame.setVisible(true);
     }
     
 }

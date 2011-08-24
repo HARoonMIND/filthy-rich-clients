@@ -1,3 +1,4 @@
+package swinghacks.ch08.Rendering.hack64;
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Dimension;
@@ -13,6 +14,8 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.UIManager;
 import javax.swing.border.EmptyBorder;
+
+import swinghacks.ch06.TransparentAndAnimatedWindows.hack47.UIHelper;
 
 public class HeaderPanel extends JPanel {
 

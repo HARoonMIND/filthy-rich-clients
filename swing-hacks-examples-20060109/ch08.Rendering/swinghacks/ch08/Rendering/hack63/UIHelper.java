@@ -1,3 +1,4 @@
+package swinghacks.ch08.Rendering.hack63;
 import java.awt.Component;
 import java.awt.Dimension;
 import java.awt.Image;

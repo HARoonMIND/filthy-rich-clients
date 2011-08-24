@@ -1,3 +1,4 @@
+package swinghacks.ch08.Rendering.hack63;
 import java.awt.*;
 import java.awt.event.*;
 import java.awt.image.*;
@@ -6,6 +7,8 @@ import javax.swing.*;
 
 import javax.media.j3d.*;
 import javax.vecmath.*;
+
+import swinghacks.ch06.TransparentAndAnimatedWindows.hack47.UIHelper;
 
 import java.util.*;
 

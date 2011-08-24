@@ -1,3 +1,4 @@
+package swinghacks.ch08.Rendering.hack56;
 import java.awt.*;
 import java.awt.event.*;
 import java.awt.image.*;

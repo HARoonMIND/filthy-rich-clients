@@ -1,3 +1,4 @@
+package swinghacks.ch08.Rendering.hack58;
 import java.awt.event.*;
 import java.awt.*;
 import javax.swing.*;
@@ -60,47 +61,47 @@ public class BlockingWindow extends JComponent
         comp.add("South",status);
 
         frame.pack();
-        frame.show();
+        frame.setVisible(true);
     }
     
+    static class LongProcess implements ActionListener, Runnable {
+    	JLabel status;
+    	BlockingWindow blocker;
+    	public LongProcess(JLabel status, BlockingWindow blocker) {
+    		this.blocker = blocker;
+    		this.status = status;
+    	}
+    	
+    	public void actionPerformed(ActionEvent evt) {
+    		blocker.block();
+    		new Thread(this).start();
+    	}
+    	
+    	public void setText(final String text) {
+    		SwingUtilities.invokeLater(new Runnable() {
+    			public void run() {
+    				status.setText(text);
+    			}
+    		});
+    	}
+    	
+    	public void run() {
+    		for(int i=10; i>0; i--) {
+    			// set the label
+    			final String text = "("+i+") seconds left";
+    			setText(text);
+    			
+    			// sleep for 1 second
+    			try {
+    				Thread.currentThread().sleep(1000);
+    			} catch (Exception ex) {
+    			}
+    		}
+    		// set the final status string
+    		setText("Process Complete");
+    		blocker.unBlock();
+    	}
+    	
+    }
 }
 
-class LongProcess implements ActionListener, Runnable {
-    JLabel status;
-    BlockingWindow blocker;
-    public LongProcess(JLabel status, BlockingWindow blocker) {
-        this.blocker = blocker;
-        this.status = status;
-    }
-    
-    public void actionPerformed(ActionEvent evt) {
-        blocker.block();
-        new Thread(this).start();
-    }
-    
-    public void setText(final String text) {
-        SwingUtilities.invokeLater(new Runnable() {
-            public void run() {
-                status.setText(text);
-            }
-        });
-    }
-    
-    public void run() {
-        for(int i=10; i>0; i--) {
-            // set the label
-            final String text = "("+i+") seconds left";
-            setText(text);
-
-            // sleep for 1 second
-            try {
-                Thread.currentThread().sleep(1000);
-            } catch (Exception ex) {
-            }
-        }
-        // set the final status string
-        setText("Process Complete");
-        blocker.unBlock();
-    }
-    
-}
