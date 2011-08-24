@@ -1,3 +1,4 @@
+package swinghacks.ch09.DragAndDrop.hack69;
 import java.awt.event.MouseAdapter;
 
 import java.util.ArrayList;

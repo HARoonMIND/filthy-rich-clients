@@ -1,3 +1,4 @@
+package swinghacks.ch09.DragAndDrop.hack65;
 import java.awt.*;
 import javax.swing.*;
 import java.awt.datatransfer.*;

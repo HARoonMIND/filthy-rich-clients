@@ -1,3 +1,4 @@
+package swinghacks.ch09.DragAndDrop.hack69;
 import java.awt.AlphaComposite;
 import java.awt.Graphics;
 import java.awt.Graphics2D;

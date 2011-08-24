@@ -1,3 +1,4 @@
+package swinghacks.ch09.DragAndDrop.hack69;
 import java.awt.Point;
 
 public class GhostDropEvent {
