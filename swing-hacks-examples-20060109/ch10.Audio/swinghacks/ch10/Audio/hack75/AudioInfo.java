@@ -1,3 +1,4 @@
+package swinghacks.ch10.Audio.hack75;
 import javax.sound.sampled.AudioInputStream;
 
 /**

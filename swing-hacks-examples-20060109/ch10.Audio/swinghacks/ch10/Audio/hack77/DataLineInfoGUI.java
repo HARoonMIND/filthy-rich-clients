@@ -1,9 +1,12 @@
+package swinghacks.ch10.Audio.hack77;
 import java.awt.*;
 import java.awt.event.*;
 import java.io.*;
 import javax.swing.*;
 import javax.swing.border.*;
 import javax.sound.sampled.*;
+
+import swinghacks.ch10.Audio.hack76.PCMFilePlayer;
 
 
 public class DataLineInfoGUI extends JPanel {
