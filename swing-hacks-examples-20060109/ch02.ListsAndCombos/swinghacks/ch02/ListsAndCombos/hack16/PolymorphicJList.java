@@ -11,6 +11,7 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import java.io.StreamTokenizer;
+import java.net.URL;
 
 import javax.swing.DefaultListModel;
 import javax.swing.ImageIcon;
@@ -57,6 +58,7 @@ public class PolymorphicJList extends JList {
 		JList list = new PolymorphicJList(dir);
 		JScrollPane pain = new JScrollPane(list, ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS, ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
 		JFrame frame = new JFrame("PolymorphicJList");
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().add(pain);
 		frame.pack();
 		frame.setVisible(true);
@@ -95,13 +97,13 @@ public class PolymorphicJList extends JList {
 
 	protected void buildIcons() {
 		String SEP = System.getProperty("file.separator");
-		fileIcon = new ImageIcon("images" + SEP + "generic.gif");
-		textFileIcon = new ImageIcon("images" + SEP + "text.gif");
-		directoryIcon = new ImageIcon("images" + SEP + "folder.gif");
-		imageFileIcon = new ImageIcon("images" + SEP + "image.gif");
-		pngFileIcon = new ImageIcon("images" + SEP + "png.gif");
-		gifFileIcon = new ImageIcon("images" + SEP + "gif.gif");
-		jpegFileIcon = new ImageIcon("images" + SEP + "jpeg.gif");
+		fileIcon = getImageIcon("images" + SEP + "generic.gif");
+		textFileIcon = getImageIcon("images" + SEP + "text.gif");
+		directoryIcon = getImageIcon("images" + SEP + "folder.gif");
+		imageFileIcon = getImageIcon("images" + SEP + "image.gif");
+		pngFileIcon = getImageIcon("images" + SEP + "png.gif");
+		gifFileIcon = getImageIcon("images" + SEP + "gif.gif");
+		jpegFileIcon = getImageIcon("images" + SEP + "jpg.gif");
 	}
 
 	protected void buildPrototypeCells() {
@@ -298,5 +300,13 @@ public class PolymorphicJList extends JList {
 				}
 			}
 		}
+	}
+
+	public static ImageIcon getImageIcon(String filepath) {
+		return new ImageIcon(getImage(filepath));
+	}
+
+	public static URL getImage(String filepath) {
+		return PolymorphicJList.class.getResource(filepath);
 	}
 }

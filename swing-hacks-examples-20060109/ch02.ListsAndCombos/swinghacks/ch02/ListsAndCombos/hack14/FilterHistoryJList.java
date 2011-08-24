@@ -56,6 +56,7 @@ public class FilterHistoryJList extends JList {
 	public static void main(String[] args) {
 		String[] listItems = { "Chris", "Joshua", "Daniel", "Michael", "Don", "Kimi", "Kelly", "Keagan" };
 		JFrame frame = new JFrame("FilterHistoryJList");
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(new BorderLayout());
 		// populate list
 		FilterHistoryJList list = new FilterHistoryJList();
@@ -125,7 +126,7 @@ public class FilterHistoryJList extends JList {
 			textField = new JTextField(width);
 			textField.getDocument().addDocumentListener(this);
 			textField.addActionListener(this);
-			prevSearchButton = new JButton(new ImageIcon(("mag-glass.png")));
+			prevSearchButton = new JButton(new ImageIcon(getImage("mag-glass.png")));
 			prevSearchButton.setBorder(null);
 			prevSearchButton.addMouseListener(new MouseAdapter() {
 				public void mousePressed(MouseEvent me) {
@@ -185,5 +186,9 @@ public class FilterHistoryJList extends JList {
 			// that FilterField handles
 			// ((FilterModel)getModel()).refilter();
 		}
+	}
+	
+	public static URL getImage(String filepath){
+		return FilterHistoryJList.class.getResource(filepath);
 	}
 }

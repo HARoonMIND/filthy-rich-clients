@@ -70,7 +70,7 @@ public class ScrollPaneWatermark extends JViewport {
 
 	public static void main(String[] args) throws Exception {
 		JFrame frame = new JFrame("Scroll Pane Watermark Hack");
-
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		JTextArea ta = new JTextArea();
 		ta.setText(fileToString(new File(getFile("alice.txt").toURI())));
 		ta.setLineWrap(true);

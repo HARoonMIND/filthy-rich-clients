@@ -40,7 +40,7 @@ public class WatermarkTextField extends JTextField {
 
 	public static void main(String[] args) throws Exception {
 		JFrame frame = new JFrame("Watermark JTextField Hack");
-
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		JTextField textfield = new WatermarkTextField(new File(getFile("red.png").toURI()));
 		textfield.setText("A Text Field");
 		frame.getContentPane().add(textfield);

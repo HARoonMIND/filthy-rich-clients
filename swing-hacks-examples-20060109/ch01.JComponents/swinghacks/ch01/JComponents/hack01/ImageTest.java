@@ -50,6 +50,7 @@ public class ImageTest {
 		});
 
 		JFrame frame = new JFrame("Hack #XX: Image Components");
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().add(panel);
 		frame.pack();
 		frame.setVisible(true);
