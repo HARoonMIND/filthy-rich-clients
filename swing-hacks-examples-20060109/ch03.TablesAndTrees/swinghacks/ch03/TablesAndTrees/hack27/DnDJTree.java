@@ -191,6 +191,7 @@ public class DnDJTree extends JTree implements DragSourceListener, DropTargetLis
 		// show tree
 		JScrollPane scroller = new JScrollPane(tree, ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS, ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
 		JFrame frame = new JFrame("DnD JTree");
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().add(scroller);
 		frame.pack();
 		frame.setVisible(true);

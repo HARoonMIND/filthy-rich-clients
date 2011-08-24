@@ -171,6 +171,7 @@ public class ReorderableJList extends JList
                             ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS,
                             ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
         JFrame frame = new JFrame ("Checkbox JList");
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.getContentPane().add (scroller);
         frame.pack();
         frame.setVisible(true);

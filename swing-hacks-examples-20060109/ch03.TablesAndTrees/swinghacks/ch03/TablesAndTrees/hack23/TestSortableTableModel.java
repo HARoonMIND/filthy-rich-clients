@@ -76,6 +76,7 @@ public class TestSortableTableModel extends JPanel implements ActionListener {
 	public static void main(String[] args) {
 		DefaultTableModel aModel = new DefaultTableModel(data, headers);
 		JFrame frame = new JFrame("Sortable Table");
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().add(new TestSortableTableModel(aModel), BorderLayout.CENTER);
 		frame.pack();
 		frame.setVisible(true);

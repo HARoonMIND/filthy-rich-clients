@@ -20,6 +20,7 @@ public class TestColumnSelectableJTable extends Object {
 
     public static void main (String[] args) {
         JFrame f = new JFrame ("Selectable columns");
+        f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         ColumnSelectableJTable table = 
             new ColumnSelectableJTable(items, headers);
         JScrollPane scroller =

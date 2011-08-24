@@ -95,6 +95,7 @@ public class WindowSaver implements AWTEventListener {
         tk.addAWTEventListener(WindowSaver.getInstance(),AWTEvent.WINDOW_EVENT_MASK);
         
         final JFrame frame = new JFrame("Hack X");
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setName("WSTes.main");
         frame.getContentPane().add(new JButton("a button"));
         JMenuBar mb = new JMenuBar();
@@ -112,7 +113,7 @@ public class WindowSaver implements AWTEventListener {
         mb.add(menu);
         frame.setJMenuBar(mb);
         frame.pack();
-        frame.show();
+        frame.setVisible(true);
     }
     
 }

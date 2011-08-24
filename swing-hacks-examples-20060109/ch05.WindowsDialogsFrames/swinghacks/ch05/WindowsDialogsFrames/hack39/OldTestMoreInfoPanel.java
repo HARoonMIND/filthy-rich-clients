@@ -5,6 +5,7 @@ public class OldTestMoreInfoPanel {
 
     public static void main (String[] args) {
         JFrame frame = new JFrame();
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         JLabel label =
             new JLabel ("This is a simple JLabel as the basic contents");
         JTextArea area =

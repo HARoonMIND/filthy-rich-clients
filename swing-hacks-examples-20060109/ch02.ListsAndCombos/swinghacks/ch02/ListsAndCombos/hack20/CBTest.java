@@ -16,6 +16,7 @@ import javax.swing.JFrame;
 public class CBTest {
 	public static void main(String[] args) {
 		JFrame frame = new JFrame("Hack 4: Lists Aware Combo Box");
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		Container root = frame.getContentPane();
 		root.setLayout(new BoxLayout(root, BoxLayout.X_AXIS));
 

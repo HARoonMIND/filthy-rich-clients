@@ -7,6 +7,7 @@ import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.Image;
 import java.awt.RenderingHints;
+import java.net.URL;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
@@ -27,9 +28,9 @@ public class CalendarHack extends JPanel {
 	}
 
 	public CalendarHack() {
-		background = new ImageIcon("calendar.png").getImage();
-		highlight = new ImageIcon("highlight.png").getImage();
-		day_img = new ImageIcon("day.png").getImage();
+		background = getImageIcon("calendar.png").getImage();
+		highlight = getImageIcon("highlight.png").getImage();
+		day_img = getImageIcon("day.png").getImage();
 		this.setPreferredSize(new Dimension(300, 280));
 	}
 
@@ -80,5 +81,13 @@ public class CalendarHack extends JPanel {
 
 		frame.pack();
 		frame.setVisible(true);
+	}
+	
+	public static URL getImage(String filepath) {
+		return CalendarHack.class.getResource(filepath);
+	}
+	
+	public static ImageIcon getImageIcon(String filepath){
+		return new ImageIcon(getImage(filepath));
 	}
 }

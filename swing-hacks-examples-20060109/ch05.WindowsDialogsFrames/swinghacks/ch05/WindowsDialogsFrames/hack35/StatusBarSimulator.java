@@ -15,6 +15,7 @@ public class StatusBarSimulator {
         }
 
         JFrame frame = new JFrame();
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setBounds(200,200, 600, 200);
         frame.setTitle("Status bar simulator");
 
@@ -24,8 +25,7 @@ public class StatusBarSimulator {
         JStatusBar statusBar = new JStatusBar();
         contentPane.add(statusBar, BorderLayout.SOUTH);
 
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.show();
+        frame.setVisible(true);
 
     }
 

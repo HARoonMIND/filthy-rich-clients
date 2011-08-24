@@ -108,6 +108,7 @@ public class RightClickGlassPane extends JComponent implements MouseListener, Mo
 	public static void main(String[] args) {
 		// create a frame with some components in it
 		JFrame frame = new JFrame("Right Click Test");
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		JButton button = new JButton("this is a button");
 		JTextField tf = new JTextField("this is a textfield");
 		JPanel panel = new JPanel();
@@ -129,7 +130,7 @@ public class RightClickGlassPane extends JComponent implements MouseListener, Mo
 		// pack and show the frame
 		frame.pack();
 		frame.setSize(400, 200);
-		frame.show();
+		frame.setVisible(true);
 	}
 
 	// utiltity function

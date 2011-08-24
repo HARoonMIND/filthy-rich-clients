@@ -31,6 +31,7 @@ public class TestColumnResizer {
 		JTable table = new JTable(mod);
 		JScrollPane pane = new JScrollPane(table, ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS, ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
 		JFrame frame = new JFrame("JTable Column Widths");
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().add(pane);
 		frame.pack();
 		frame.setVisible(true);

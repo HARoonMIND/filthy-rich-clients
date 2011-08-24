@@ -40,6 +40,7 @@ public class ExcelExporter {
 		String[] headers = { "Department", "Daily Revenue" };
 
 		JFrame frame = new JFrame("JTable to Excel Hack");
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		DefaultTableModel model = new DefaultTableModel(data, headers);
 		final JTable table = new JTable(model);
 		JScrollPane scroll = new JScrollPane(table);

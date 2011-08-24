@@ -67,6 +67,7 @@ public class TestJDBCTable {
 			JTable jtable = new JTable(mod);
 			JScrollPane scroller = new JScrollPane(jtable, ScrollPaneConstants.VERTICAL_SCROLLBAR_AS_NEEDED, ScrollPaneConstants.HORIZONTAL_SCROLLBAR_AS_NEEDED);
 			JFrame frame = new JFrame("JDBCTableModel demo");
+			frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 			frame.getContentPane().add(scroller);
 			frame.pack();
 			frame.setVisible(true);

@@ -1,12 +1,22 @@
 package swinghacks.ch05.WindowsDialogsFrames.hack40;
 
-import javax.swing.AbstractAction;
-import javax.swing.JFrame;
-import javax.swing.*;
+import java.awt.BorderLayout;
+import java.awt.Dimension;
+import java.awt.Point;
 import java.awt.event.ActionEvent;
-import java.lang.*;
-import java.awt.event.*;
-import java.awt.*;
+import java.awt.event.ActionListener;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
+import java.net.URL;
+
+import javax.swing.ImageIcon;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JMenu;
+import javax.swing.JMenuBar;
+import javax.swing.JMenuItem;
+import javax.swing.JPanel;
+import javax.swing.JPopupMenu;
 
 public class MiniMizeHack implements MouseListener, ActionListener {
     
@@ -26,10 +36,11 @@ public class MiniMizeHack implements MouseListener, ActionListener {
     Dimension normal_size;
     
     public MiniMizeHack() {
-        top = new JLabel(new ImageIcon("image.png"));
+        top = new JLabel(getImageIcon("image.png"));
         bottom = new JLabel("further info");
         
         frame = new JFrame("Mini Mize Hack");
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         panel = new JPanel();
         panel.setLayout(new BorderLayout());
         panel.add("Center",bottom);
@@ -71,11 +82,12 @@ public class MiniMizeHack implements MouseListener, ActionListener {
         normal_size = frame.getSize();
         frame.setVisible(false);
         frame = new JFrame();
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setUndecorated(true);
         frame.getContentPane().add(panel);
         
         // hide the extra components
-        bottom.hide();
+        bottom.setVisible(false);
         
         // add the popup
         panel.addMouseListener(this);
@@ -95,11 +107,12 @@ public class MiniMizeHack implements MouseListener, ActionListener {
         Point location = frame.getLocation();
         frame.setVisible(false);
         frame = new JFrame();
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setUndecorated(false);
         frame.getContentPane().add(panel);
         
         // show the extra components
-        bottom.show();
+        bottom.setVisible(true);
         frame.setJMenuBar(menubar);
         
         // hide the popup
@@ -133,5 +146,12 @@ public class MiniMizeHack implements MouseListener, ActionListener {
         }
     }
     
+    public static URL getImage(String filepath) {
+		return MiniMizeHack.class.getResource(filepath);
+	}
+	
+	public static ImageIcon getImageIcon(String filepath){
+		return new ImageIcon(getImage(filepath));
+	}
 }
 

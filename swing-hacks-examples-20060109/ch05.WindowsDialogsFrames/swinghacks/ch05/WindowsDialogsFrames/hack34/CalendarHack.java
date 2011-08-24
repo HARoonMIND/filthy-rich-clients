@@ -1,12 +1,21 @@
 package swinghacks.ch05.WindowsDialogsFrames.hack34;
-import javax.swing.*;
+import java.awt.Color;
+import java.awt.Dimension;
+import java.awt.Font;
+import java.awt.Graphics;
+import java.awt.Graphics2D;
+import java.awt.Image;
+import java.awt.RenderingHints;
+import java.net.URL;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
+
+import javax.swing.ImageIcon;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
 
 import swinghacks.ch01.JComponents.hack04.MoveMouseListener;
-
-import java.awt.*;
-import java.util.*;
-import java.text.SimpleDateFormat;
-import java.awt.event.*;
 
 public class CalendarHack extends JPanel {
     protected Image background, highlight, day_img;
@@ -19,9 +28,9 @@ public class CalendarHack extends JPanel {
         this.date = date;
     }
     public CalendarHack() {
-        background = new ImageIcon("calendar.png").getImage();
-        highlight = new ImageIcon("highlight.png").getImage();
-        day_img = new ImageIcon("day.png").getImage();
+        background = getImageIcon("calendar.png").getImage();
+        highlight = getImageIcon("highlight.png").getImage();
+        day_img = getImageIcon("day.png").getImage();
         this.setPreferredSize(new Dimension(300,280));
     }
     
@@ -57,6 +66,7 @@ public class CalendarHack extends JPanel {
 
     public static void main(String[] args) {
         JFrame frame = new JFrame();
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         CalendarHack ch = new CalendarHack();
         ch.setDate(new Date());
         frame.getContentPane().add(ch);
@@ -70,6 +80,14 @@ public class CalendarHack extends JPanel {
         frame.pack();
         frame.setVisible(true);
     }
+    
+    public static URL getImage(String filepath) {
+		return CalendarHack.class.getResource(filepath);
+	}
+	
+	public static ImageIcon getImageIcon(String filepath){
+		return new ImageIcon(getImage(filepath));
+	}
 }
 
 

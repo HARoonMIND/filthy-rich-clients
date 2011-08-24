@@ -47,6 +47,7 @@ public class GenericListCellRenderer extends DefaultListCellRenderer {
 		list.setCellRenderer(renderer);
 
 		JFrame frame = new JFrame("Cell Renderer Hack");
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().add(list);
 		frame.pack();
 		frame.setVisible(true);

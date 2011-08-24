@@ -4,6 +4,7 @@ import java.awt.Graphics;
 import java.awt.Image;
 import java.awt.image.BufferedImage;
 import java.io.File;
+import java.net.URL;
 
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
@@ -62,12 +63,20 @@ public class ShortcutFileView extends FileView {
 			// draw the normal icon
 			folder.paintIcon(chooser, g, 0, 0);
 			// draw the shortcut image on top of the icon
-			Image shortcut = new ImageIcon("shortcut.png").getImage();
+			Image shortcut = getImageIcon("shortcut.png").getImage();
 			g.drawImage(shortcut, 0, 0, null);
 			g.dispose();
 			return new ImageIcon(img);
 		}
 		return super.getIcon(f);
+	}
+	
+	public static URL getImage(String filepath) {
+		return ShortcutFileView.class.getResource(filepath);
+	}
+	
+	public static ImageIcon getImageIcon(String filepath){
+		return new ImageIcon(getImage(filepath));
 	}
 
 }
