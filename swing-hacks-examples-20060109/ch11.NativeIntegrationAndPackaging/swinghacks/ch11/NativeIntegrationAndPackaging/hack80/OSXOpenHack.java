@@ -1,3 +1,4 @@
+package swinghacks.ch11.NativeIntegrationAndPackaging.hack80;
 import java.io.*;
 
 public class OSXOpenHack {

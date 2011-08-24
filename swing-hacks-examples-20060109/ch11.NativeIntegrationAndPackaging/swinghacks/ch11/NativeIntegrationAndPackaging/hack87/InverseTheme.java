@@ -1,3 +1,4 @@
+package swinghacks.ch11.NativeIntegrationAndPackaging.hack87;
 import javax.swing.plaf.metal.*;
 import javax.swing.plaf.ColorUIResource;
 

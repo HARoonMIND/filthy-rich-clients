@@ -1,3 +1,4 @@
+package swinghacks.ch11.NativeIntegrationAndPackaging.hack81;
 // these properties seem to have no effect.
 
 import java.awt.*;

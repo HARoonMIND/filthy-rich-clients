@@ -1,3 +1,4 @@
+package swinghacks.ch11.NativeIntegrationAndPackaging.hack86;
 import java.awt.*;
 import java.io.*;
 import javax.swing.*;
