@@ -1,3 +1,4 @@
+package swinghacks.ch05.WindowsDialogsFrames.hack40;
 
 import javax.swing.AbstractAction;
 import javax.swing.JFrame;

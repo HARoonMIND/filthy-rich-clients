@@ -1,3 +1,4 @@
+package swinghacks.ch05.WindowsDialogsFrames.hack39;
 import javax.swing.*;
 
 public class OldTestMoreInfoPanel {

@@ -1,3 +1,4 @@
+package swinghacks.ch05.WindowsDialogsFrames.hack34;
 import javax.swing.*;
 
 import swinghacks.ch01.JComponents.hack04.MoveMouseListener;

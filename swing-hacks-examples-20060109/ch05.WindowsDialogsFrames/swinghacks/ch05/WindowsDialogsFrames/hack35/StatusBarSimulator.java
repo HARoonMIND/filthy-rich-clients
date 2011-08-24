@@ -1,3 +1,4 @@
+package swinghacks.ch05.WindowsDialogsFrames.hack35;
 
 import com.sun.java.swing.plaf.windows.WindowsLookAndFeel;
 

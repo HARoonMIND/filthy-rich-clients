@@ -1,3 +1,4 @@
+package swinghacks.ch05.WindowsDialogsFrames.hack39;
 import java.awt.*;
 import javax.swing.*;
 
