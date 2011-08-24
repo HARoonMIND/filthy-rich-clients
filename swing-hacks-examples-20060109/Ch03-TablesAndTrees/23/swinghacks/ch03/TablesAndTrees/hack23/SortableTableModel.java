@@ -1,6 +1,13 @@
-import javax.swing.table.*;
-import javax.swing.event.*;
-import java.util.*;
+package swinghacks.ch03.TablesAndTrees.hack23;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+
+import javax.swing.event.EventListenerList;
+import javax.swing.event.TableModelEvent;
+import javax.swing.event.TableModelListener;
+import javax.swing.table.TableModel;
 
 public class SortableTableModel implements TableModel, TableModelListener {
 

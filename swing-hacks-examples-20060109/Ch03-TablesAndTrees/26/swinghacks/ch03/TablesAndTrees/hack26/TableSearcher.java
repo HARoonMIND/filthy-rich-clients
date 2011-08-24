@@ -1,3 +1,5 @@
+package swinghacks.ch03.TablesAndTrees.hack26;
+
 import org.apache.lucene.store.RAMDirectory;
 import org.apache.lucene.document.Document;
 import org.apache.lucene.document.Field;

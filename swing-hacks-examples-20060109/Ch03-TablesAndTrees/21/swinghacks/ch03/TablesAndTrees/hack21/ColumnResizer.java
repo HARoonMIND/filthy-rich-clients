@@ -1,6 +1,11 @@
-import java.awt.*;
-import javax.swing.*;
-import javax.swing.table.*;
+package swinghacks.ch03.TablesAndTrees.hack21;
+
+import java.awt.Component;
+
+import javax.swing.JTable;
+import javax.swing.table.TableCellRenderer;
+import javax.swing.table.TableColumn;
+import javax.swing.table.TableColumnModel;
 
 public class ColumnResizer {
 

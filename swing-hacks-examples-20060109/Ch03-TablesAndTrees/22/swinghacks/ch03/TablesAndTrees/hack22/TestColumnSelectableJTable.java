@@ -1,5 +1,8 @@
-import java.awt.*;
-import javax.swing.*;
+package swinghacks.ch03.TablesAndTrees.hack22;
+
+import javax.swing.JFrame;
+import javax.swing.JScrollPane;
+import javax.swing.ScrollPaneConstants;
 
 public class TestColumnSelectableJTable extends Object {
 
