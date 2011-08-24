@@ -1,3 +1,4 @@
+package swinghacks.ch06.TransparentAndAnimatedWindows.hack43;
 import javax.swing.RepaintManager;
 import javax.swing.JComponent;
 import java.awt.Container;

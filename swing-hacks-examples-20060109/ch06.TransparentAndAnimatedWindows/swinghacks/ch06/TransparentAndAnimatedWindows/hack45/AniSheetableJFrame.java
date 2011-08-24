@@ -1,3 +1,4 @@
+package swinghacks.ch06.TransparentAndAnimatedWindows.hack45;
 import javax.swing.*;
 import javax.swing.border.*;
 import java.awt.*;

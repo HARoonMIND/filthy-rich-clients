@@ -1,3 +1,4 @@
+package swinghacks.ch06.TransparentAndAnimatedWindows.hack45;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
@@ -7,14 +8,14 @@ public class SheetTest extends Object
     implements PropertyChangeListener {
 
     JOptionPane optionPane;
-    SheetableJFrame frame;
+    AniSheetableJFrame frame;
 
     public static void main (String[] args) {
         new SheetTest();
     }
 
     public SheetTest () {
-        frame = new SheetableJFrame ("Sheet test");
+        frame = new AniSheetableJFrame ("Animated sheet test");
         // put an image in the frame's content pane
         ImageIcon icon = new ImageIcon ("keagy-lunch.png");
         JLabel label = new JLabel (icon);
@@ -32,6 +33,7 @@ public class SheetTest extends Object
         JDialog dialog = 
             optionPane.createDialog (frame, "irrelevant");
         frame.showJDialogAsSheet (dialog);
+
     }
 
     public void propertyChange (PropertyChangeEvent pce) {

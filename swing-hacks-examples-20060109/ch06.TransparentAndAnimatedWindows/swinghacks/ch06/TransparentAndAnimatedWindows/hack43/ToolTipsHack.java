@@ -1,4 +1,8 @@
+package swinghacks.ch06.TransparentAndAnimatedWindows.hack43;
 import javax.swing.*;
+
+import swinghacks.ch01.JComponents.hack11.FullRepaintManager;
+
 import java.awt.*;
 import java.awt.geom.*;
 

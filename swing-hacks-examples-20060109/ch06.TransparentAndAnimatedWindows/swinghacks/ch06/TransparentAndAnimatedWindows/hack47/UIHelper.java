@@ -1,3 +1,4 @@
+package swinghacks.ch06.TransparentAndAnimatedWindows.hack47;
 import java.awt.Toolkit;
 import java.net.URL;
 

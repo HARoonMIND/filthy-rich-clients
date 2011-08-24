@@ -1,3 +1,4 @@
+package swinghacks.ch06.TransparentAndAnimatedWindows.hack41;
 import javax.swing.*;
 import java.awt.*;
 public class BGTest2 {

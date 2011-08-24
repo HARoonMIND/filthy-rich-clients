@@ -1,3 +1,4 @@
+package swinghacks.ch06.TransparentAndAnimatedWindows.hack46;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;

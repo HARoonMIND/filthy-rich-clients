@@ -1,3 +1,4 @@
+package swinghacks.ch06.TransparentAndAnimatedWindows.hack47;
 /**
  * 18:05 17/02/2005
  * Romain Guy <romain.guy@jext.org>
