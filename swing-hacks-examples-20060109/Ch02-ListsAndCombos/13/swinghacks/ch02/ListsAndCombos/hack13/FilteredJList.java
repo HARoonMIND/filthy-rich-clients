@@ -1,7 +1,17 @@
-import java.awt.*;
-import javax.swing.event.*;
-import javax.swing.*;
+package swinghacks.ch02.ListsAndCombos.hack13;
+
+import java.awt.BorderLayout;
 import java.util.ArrayList;
+
+import javax.swing.AbstractListModel;
+import javax.swing.JFrame;
+import javax.swing.JList;
+import javax.swing.JScrollPane;
+import javax.swing.JTextField;
+import javax.swing.ListModel;
+import javax.swing.ScrollPaneConstants;
+import javax.swing.event.DocumentEvent;
+import javax.swing.event.DocumentListener;
 
 public class FilteredJList extends JList {
 
