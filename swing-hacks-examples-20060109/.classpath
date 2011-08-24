@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="ch01.JComponents"/>
+	<classpathentry kind="src" path="ch02.ListsAndCombos"/>
+	<classpathentry excluding="swinghacks/ch03/TablesAndTrees/hack26/TableSearcher.java" kind="src" path="ch03.TablesAndTrees"/>
+	<classpathentry kind="src" path="ch04.FileChoosers"/>
+	<classpathentry kind="src" path="ch05.WindowsDialogsFrames"/>
+	<classpathentry kind="src" path="ch06.TransparentAndAnimatedWindows"/>
+	<classpathentry kind="src" path="ch07.Text"/>
+	<classpathentry excluding="swinghacks/ch08/Rendering/hack63/BooksDemo.java" kind="src" path="ch08.Rendering"/>
+	<classpathentry excluding="swinghacks/ch09/DragAndDrop/hack68/QTJPictHelper.java" kind="src" path="ch09.DragAndDrop"/>
+	<classpathentry excluding="swinghacks/ch10/Audio/hack74/MP3Player.java|swinghacks/ch10/Audio/hack73/QTJSound.java|swinghacks/ch10/Audio/hack72/JMFSound.java" kind="src" path="ch10.Audio"/>
+	<classpathentry kind="src" path="ch11.NativeIntegrationAndPackaging"/>
+	<classpathentry excluding="swinghacks/ch12/Miscellany/hack98/VelocityHtmlPanel.java|swinghacks/ch12/Miscellany/hack98/VelocityHtmlPanelSimulator.java|swinghacks/ch12/Miscellany/hack98/WeatherPanel.java|swinghacks/ch12/Miscellany/hack98/WeatherPanelSimulator.java" kind="src" path="ch12.Miscellany"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="lib/mail.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
