@@ -1,13 +1,16 @@
 package swinghacks.ch10.Audio.hack73;
-import java.io.*;
-import javax.swing.*;
+import java.io.File;
 
-import quicktime.std.*;
-import quicktime.std.clocks.*;
-import quicktime.std.movies.*;
-import quicktime.*;
-import quicktime.io.*;
-import quicktime.app.time.*;
+import javax.swing.JDialog;
+import javax.swing.JFileChooser;
+import javax.swing.JOptionPane;
+
+//import quicktime.std.*;
+//import quicktime.std.clocks.*;
+//import quicktime.std.movies.*;
+//import quicktime.*;
+//import quicktime.io.*;
+//import quicktime.app.time.*;
 
 public class QTJSound extends Object {
 

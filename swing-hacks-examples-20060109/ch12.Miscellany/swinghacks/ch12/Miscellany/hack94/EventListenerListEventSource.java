@@ -1,34 +1,33 @@
 package swinghacks.ch12.Miscellany.hack94;
-import java.util.*;
-import javax.swing.event.*;
 
-public class EventListenerListEventSource 
-    extends TestEventSource {
+import java.util.EventObject;
 
-    EventListenerList listenerList = new EventListenerList();
+import javax.swing.event.EventListenerList;
 
-    public void addListener (TestEventListener l) {
-        listenerList.add (TestEventListener.class, l);
-    }
-    
-    public void removeListener (TestEventListener l) {
-        listenerList.remove (TestEventListener.class, l);
-    }
+public class EventListenerListEventSource extends TestEventSource {
 
-    public void fireEvent (EventObject o) {
-        Object[] listeners = listenerList.getListenerList();
-        for (int i = listeners.length-2; i>=0; i-=2) {
-            if (listeners[i] == TestEventListener.class) {
-                ((TestEventListener) listeners[i+1]).handleEvent(o);
-            }
-        }
-    }
+	EventListenerList listenerList = new EventListenerList();
 
-    public static void main (String[] args) {
-        EventListenerListEventSource bfles = 
-            new EventListenerListEventSource();
-        bfles.test();
-    }
+	public void addListener(TestEventListener l) {
+		listenerList.add(TestEventListener.class, l);
+	}
 
+	public void removeListener(TestEventListener l) {
+		listenerList.remove(TestEventListener.class, l);
+	}
+
+	public void fireEvent(EventObject o) {
+		Object[] listeners = listenerList.getListenerList();
+		for (int i = listeners.length - 2; i >= 0; i -= 2) {
+			if (listeners[i] == TestEventListener.class) {
+				((TestEventListener) listeners[i + 1]).handleEvent(o);
+			}
+		}
+	}
+
+	public static void main(String[] args) {
+		EventListenerListEventSource bfles = new EventListenerListEventSource();
+		bfles.test();
+	}
 
 }

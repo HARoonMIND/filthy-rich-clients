@@ -39,6 +39,7 @@ public class ImageDropTargetDemo extends JPanel
 
     public static void main (String[] args) {
         JFrame frame = new JFrame ("Image DropTarget Demo");
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         ImageDropTargetDemo demoPanel = new ImageDropTargetDemo();
         frame.getContentPane().add (demoPanel);
         frame.pack();

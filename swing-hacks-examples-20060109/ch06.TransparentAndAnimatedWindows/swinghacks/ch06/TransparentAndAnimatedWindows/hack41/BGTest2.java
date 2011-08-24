@@ -5,6 +5,7 @@ public class BGTest2 {
     
     public static void main(String[] args) {
         JFrame frame = new JFrame("Transparent Window");
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setUndecorated(true);
         TransparentBackground bg = new TransparentBackground(frame);
         bg.setLayout(new BorderLayout());
@@ -25,7 +26,7 @@ public class BGTest2 {
         frame.pack();
         frame.setSize(200,200);
         frame.setLocation(500,500);
-        frame.show();
+        frame.setVisible(true);
     }
 
 }

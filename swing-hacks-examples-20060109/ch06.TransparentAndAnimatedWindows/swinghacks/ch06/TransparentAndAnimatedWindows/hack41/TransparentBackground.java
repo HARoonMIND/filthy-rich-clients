@@ -90,9 +90,9 @@ public class TransparentBackground extends JComponent
                    ((now - lastupdate) > 1000)) {
                     if(frame.isVisible()) {
                         Point location = frame.getLocation();
-                        frame.hide();
+                        frame.setVisible(false);
                         updateBackground();
-                        frame.show();
+                        frame.setVisible(true);
                         frame.setLocation(location);
                         refresh();
                     }

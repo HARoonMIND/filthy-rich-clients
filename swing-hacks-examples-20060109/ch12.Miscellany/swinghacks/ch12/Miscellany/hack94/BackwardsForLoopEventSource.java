@@ -1,31 +1,30 @@
 package swinghacks.ch12.Miscellany.hack94;
-import java.util.*;
 
-public class BackwardsForLoopEventSource 
-    extends TestEventSource {
+import java.util.ArrayList;
+import java.util.EventObject;
 
-    ArrayList listeners = new ArrayList();
+public class BackwardsForLoopEventSource extends TestEventSource {
 
-    public void addListener (TestEventListener l) {
-        listeners.add (l);
-    }
-    
-    public void removeListener (TestEventListener l) {
-        listeners.remove (l);
-    }
+	ArrayList listeners = new ArrayList();
 
-    public void fireEvent (EventObject o) {
-        for (int i=listeners.size()-1; i>=0; i--) {
-            TestEventListener l = (TestEventListener) listeners.get(i);
-            l.handleEvent (o);
-        }
-    }
+	public void addListener(TestEventListener l) {
+		listeners.add(l);
+	}
 
-    public static void main (String[] args) {
-        BackwardsForLoopEventSource bfles = 
-            new BackwardsForLoopEventSource();
-        bfles.test();
-    }
+	public void removeListener(TestEventListener l) {
+		listeners.remove(l);
+	}
 
+	public void fireEvent(EventObject o) {
+		for (int i = listeners.size() - 1; i >= 0; i--) {
+			TestEventListener l = (TestEventListener) listeners.get(i);
+			l.handleEvent(o);
+		}
+	}
+
+	public static void main(String[] args) {
+		BackwardsForLoopEventSource bfles = new BackwardsForLoopEventSource();
+		bfles.test();
+	}
 
 }

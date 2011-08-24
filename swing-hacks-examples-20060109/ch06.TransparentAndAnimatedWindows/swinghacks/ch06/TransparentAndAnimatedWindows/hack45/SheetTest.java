@@ -1,8 +1,13 @@
 package swinghacks.ch06.TransparentAndAnimatedWindows.hack45;
-import javax.swing.*;
-import java.awt.*;
-import java.awt.event.*;
-import java.beans.*;
+import java.beans.PropertyChangeEvent;
+import java.beans.PropertyChangeListener;
+import java.net.URL;
+
+import javax.swing.ImageIcon;
+import javax.swing.JDialog;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 
 public class SheetTest extends Object 
     implements PropertyChangeListener {
@@ -16,8 +21,9 @@ public class SheetTest extends Object
 
     public SheetTest () {
         frame = new AniSheetableJFrame ("Animated sheet test");
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         // put an image in the frame's content pane
-        ImageIcon icon = new ImageIcon ("keagy-lunch.png");
+        ImageIcon icon = getImageIcon ("keagy-lunch.png");
         JLabel label = new JLabel (icon);
         frame.getContentPane().add(label);
         // build JOptionPane dialog and hold onto it
@@ -43,5 +49,13 @@ public class SheetTest extends Object
             frame.hideSheet();
         }
     }
+    
+    public static URL getImage(String filepath) {
+		return SheetTest.class.getResource(filepath);
+	}
+
+	public static ImageIcon getImageIcon(String filepath) {
+		return new ImageIcon(getImage(filepath));
+	}
 
 }

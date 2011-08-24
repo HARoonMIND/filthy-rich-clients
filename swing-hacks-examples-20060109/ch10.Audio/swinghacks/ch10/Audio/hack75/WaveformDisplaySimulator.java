@@ -1,37 +1,40 @@
 package swinghacks.ch10.Audio.hack75;
-import javax.swing.*;
+
+import java.awt.BorderLayout;
+import java.io.BufferedInputStream;
+import java.io.File;
+import java.io.FileInputStream;
+
 import javax.sound.sampled.AudioInputStream;
 import javax.sound.sampled.AudioSystem;
-import java.awt.*;
-import java.io.*;
+import javax.swing.JFrame;
 
 public class WaveformDisplaySimulator {
 
-    public static void main(String[] args) {
-        try {
+	public static void main(String[] args) {
+		try {
 
-            JFrame frame = new JFrame("Waveform Display Simulator");
-            frame.setBounds(200,200, 500, 350);
+			JFrame frame = new JFrame("Waveform Display Simulator");
+			frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+			frame.setBounds(200, 200, 500, 350);
 
-            File file = new File(args[0]);
-            AudioInputStream audioInputStream = AudioSystem.getAudioInputStream(new BufferedInputStream (new FileInputStream (file)));
+			File file = new File(args[0]);
+			AudioInputStream audioInputStream = AudioSystem.getAudioInputStream(new BufferedInputStream(new FileInputStream(file)));
 
-            WaveformPanelContainer container = new WaveformPanelContainer();
-            container.setAudioToDisplay(audioInputStream);
+			WaveformPanelContainer container = new WaveformPanelContainer();
+			container.setAudioToDisplay(audioInputStream);
 
-            frame.getContentPane().setLayout(new BorderLayout());
-            frame.getContentPane().add(container, BorderLayout.CENTER);
-
-            frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-
-            frame.show();
-            frame.validate();
-            frame.repaint();
+			frame.getContentPane().setLayout(new BorderLayout());
+			frame.getContentPane().add(container, BorderLayout.CENTER);
 
 
-        } catch (Exception e){
-            e.printStackTrace();
-        }
-    }
+			frame.setVisible(true);
+			frame.validate();
+			frame.repaint();
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
 
 }

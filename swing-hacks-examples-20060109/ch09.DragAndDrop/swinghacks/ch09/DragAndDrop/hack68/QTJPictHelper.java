@@ -1,13 +1,16 @@
 package swinghacks.ch09.DragAndDrop.hack68;
-import java.awt.*;
-import java.io.*;
+import java.awt.Dimension;
+import java.awt.Image;
+import java.awt.Toolkit;
+import java.io.IOException;
+import java.io.InputStream;
 
-import quicktime.*;
-import quicktime.qd.*;
-import quicktime.std.*;
-import quicktime.std.image.*;
-import quicktime.std.movies.media.*;
-import quicktime.app.view.*;
+//import quicktime.*;
+//import quicktime.qd.*;
+//import quicktime.std.*;
+//import quicktime.std.image.*;
+//import quicktime.std.movies.media.*;
+//import quicktime.app.view.*;
 
 // on Mac, this class must be compiled with:
 // javac -classpath /System/Library/Java/Extensions/QTJava.zip QTJPictHelper.java

@@ -1,65 +1,70 @@
 package swinghacks.ch07.Text.hack52;
-import java.awt.*;
-import javax.swing.*;
+
+import java.awt.Container;
+
+import javax.swing.BoxLayout;
+import javax.swing.JButton;
+import javax.swing.JCheckBox;
+import javax.swing.JComboBox;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JRadioButton;
 
 public class HTMLTest {
 
-    public static void main(String[] args) {
-        JFrame frame = new JFrame("Hack blah");
-        //JButton b1 = new JButton("my button");
-        JButton b1a = new JButton("<html><i>my button</i>");
-        JButton b2 = new JButton("<html><i>my</i> button</html>");
-        JLabel l1 = new JLabel("<html><u>underlined</u></html>");
-        JLabel l2 = new JLabel("<html>my multi-<br>line text</html>");
-        
-        JCheckBox cb1 = new JCheckBox("<html>The <i>real</i> thing");
-        JRadioButton rb1 = new JRadioButton("<html>Even <font color=\"#ff0000\">better</font>");
-        
-        String[] vals = { "<html><i>better</i>",
-                          "<html><u>still</u>" };
-        JComboBox combo1 = new JComboBox(vals);
-        
-        
-        StringBuffer sb = new StringBuffer();
-        sb.append("<html><head><style type='text/css'>");
-        sb.append("li { font-style: italic; font-size: 30pt; }");
-        sb.append("li { font-family: serif; color: #ff5555; }");
-        sb.append("ul { border-width: 4px; border-style: solid; border-color: #ff0000; } ");
-        sb.append("ul { background-color: #ffeeee; }");
-        sb.append("</style></head>");
-        sb.append("<h3>H3 Header</h3>");
-        sb.append("<ul><li>large serifed text</li><li>as list items</li>");
-        sb.append("</html>");
-        
-        JLabel l3 = new JLabel(sb.toString());
-        
-        
-        StringBuffer css = new StringBuffer();
-        css.append("<html><head><style type='text/css'>");
-        css.append("body { color: #4444ff; font-weight: normal;}");
-        css.append("</head><body>");
-        
-        JLabel l4 = new JLabel(css+"Cartman");
-        JLabel l5 = new JLabel(css+"Stan");
+	public static void main(String[] args) {
+		JFrame frame = new JFrame("Hack blah");
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		//JButton b1 = new JButton("my button");
+		JButton b1a = new JButton("<html><i>my button</i>");
+		JButton b2 = new JButton("<html><i>my</i> button</html>");
+		JLabel l1 = new JLabel("<html><u>underlined</u></html>");
+		JLabel l2 = new JLabel("<html>my multi-<br>line text</html>");
 
-        
-        Container root = frame.getContentPane();
-        root.setLayout(new BoxLayout(root,BoxLayout.Y_AXIS));
-        //root.add(b1);
-        //root.add(b1a);
-        //root.add(b2);
-        // root.add(l1);
-        // root.add(l2);
-        // root.add(cb1);
-        // root.add(rb1);
-        // root.add(combo1);
-        // root.add(l3);
-        root.add(l4);
-        root.add(l5);
-        
-        frame.pack();
-        frame.setVisible(true);
-    }
+		JCheckBox cb1 = new JCheckBox("<html>The <i>real</i> thing");
+		JRadioButton rb1 = new JRadioButton("<html>Even <font color=\"#ff0000\">better</font>");
+
+		String[] vals = { "<html><i>better</i>", "<html><u>still</u>" };
+		JComboBox combo1 = new JComboBox(vals);
+
+		StringBuffer sb = new StringBuffer();
+		sb.append("<html><head><style type='text/css'>");
+		sb.append("li { font-style: italic; font-size: 30pt; }");
+		sb.append("li { font-family: serif; color: #ff5555; }");
+		sb.append("ul { border-width: 4px; border-style: solid; border-color: #ff0000; } ");
+		sb.append("ul { background-color: #ffeeee; }");
+		sb.append("</style></head>");
+		sb.append("<h3>H3 Header</h3>");
+		sb.append("<ul><li>large serifed text</li><li>as list items</li>");
+		sb.append("</html>");
+
+		JLabel l3 = new JLabel(sb.toString());
+
+		StringBuffer css = new StringBuffer();
+		css.append("<html><head><style type='text/css'>");
+		css.append("body { color: #4444ff; font-weight: normal;}");
+		css.append("</head><body>");
+
+		JLabel l4 = new JLabel(css + "Cartman");
+		JLabel l5 = new JLabel(css + "Stan");
+
+		Container root = frame.getContentPane();
+		root.setLayout(new BoxLayout(root, BoxLayout.Y_AXIS));
+		//root.add(b1);
+		//root.add(b1a);
+		//root.add(b2);
+		// root.add(l1);
+		// root.add(l2);
+		// root.add(cb1);
+		// root.add(rb1);
+		// root.add(combo1);
+		// root.add(l3);
+		root.add(l4);
+		root.add(l5);
+
+		frame.pack();
+		frame.setVisible(true);
+	}
 
 }
 
@@ -88,5 +93,4 @@ sb css example
 
 more available information about css support in the javax.swing.text.html.CSS class javadoc.
 */
-
 

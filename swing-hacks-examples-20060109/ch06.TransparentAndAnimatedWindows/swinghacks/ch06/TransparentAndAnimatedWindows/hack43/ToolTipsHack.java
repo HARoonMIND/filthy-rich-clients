@@ -18,6 +18,7 @@ public class ToolTipsHack {
         
         
         JFrame frame = new JFrame("Tool Tips Hack");
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         BoxLayout layout =  new BoxLayout(
             frame.getContentPane(),
             BoxLayout.Y_AXIS);
@@ -41,7 +42,7 @@ public class ToolTipsHack {
         
         frame.pack();
 		frame.setSize(400,400);
-        frame.show();
+        frame.setVisible(true);
 		System.out.println(" light = " + ToolTipManager.sharedInstance().isLightWeightPopupEnabled());
     }
     

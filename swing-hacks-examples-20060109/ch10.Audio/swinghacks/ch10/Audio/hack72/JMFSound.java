@@ -1,55 +1,53 @@
 package swinghacks.ch10.Audio.hack72;
-import java.io.*;
+
+import java.io.File;
+import java.io.IOException;
 import java.net.MalformedURLException;
-import javax.swing.*;
 
-import javax.media.*;
+import javax.swing.JDialog;
+import javax.swing.JFileChooser;
+import javax.swing.JOptionPane;
 
-public class JMFSound extends Object
-    implements ControllerListener {
+//import javax.media.*;
 
-    File soundFile;
-    JDialog playingDialog;
+public class JMFSound extends Object implements ControllerListener {
 
-    public static void main (String[] args) {
-        JFileChooser chooser = new JFileChooser();
-        chooser.showOpenDialog(null);
-        File f = chooser.getSelectedFile();
-        try {
-            JMFSound s = new JMFSound (f);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
+	File soundFile;
+	JDialog playingDialog;
 
-    public JMFSound (File f)
-        throws NoPlayerException, CannotRealizeException,
-               MalformedURLException, IOException {
-        soundFile = f;
-        // prepare a dialog to display while playing
-        JOptionPane pane = new JOptionPane ("Playing " + f.getName(),
-                                            JOptionPane.PLAIN_MESSAGE);
-        playingDialog = pane.createDialog (null, "JMF Sound");
-        playingDialog.pack();
+	public static void main(String[] args) {
+		JFileChooser chooser = new JFileChooser();
+		chooser.showOpenDialog(null);
+		File f = chooser.getSelectedFile();
+		try {
+			JMFSound s = new JMFSound(f);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
 
-        // get a player
-        MediaLocator mediaLocator =
-            new MediaLocator(soundFile.toURL());
-        Player player =
-            Manager.createRealizedPlayer (mediaLocator);
-        player.addControllerListener (this);
-        player.start();
-        playingDialog.setVisible(true);
-    }
+	public JMFSound(File f) throws NoPlayerException, CannotRealizeException, MalformedURLException, IOException {
+		soundFile = f;
+		// prepare a dialog to display while playing
+		JOptionPane pane = new JOptionPane("Playing " + f.getName(), JOptionPane.PLAIN_MESSAGE);
+		playingDialog = pane.createDialog(null, "JMF Sound");
+		playingDialog.pack();
 
-    // ControllerListener implementation
-    public void controllerUpdate (ControllerEvent e) {
-        System.out.println (e.getClass().getName());
-        if (e instanceof EndOfMediaEvent) {
-            playingDialog.setVisible(false);
-            System.exit (0);
-        }
-    }
+		// get a player
+		MediaLocator mediaLocator = new MediaLocator(soundFile.toURL());
+		Player player = Manager.createRealizedPlayer(mediaLocator);
+		player.addControllerListener(this);
+		player.start();
+		playingDialog.setVisible(true);
+	}
 
+	// ControllerListener implementation
+	public void controllerUpdate(ControllerEvent e) {
+		System.out.println(e.getClass().getName());
+		if (e instanceof EndOfMediaEvent) {
+			playingDialog.setVisible(false);
+			System.exit(0);
+		}
+	}
 
 }

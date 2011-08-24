@@ -5,6 +5,7 @@ public class BGTest1 {
     
     public static void main(String[] args) {
         JFrame frame = new JFrame("Transparent Window");
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         TransparentBackground bg = new TransparentBackground(frame);
         bg.setLayout(new BorderLayout());
         JButton button = new JButton("This is a button");
@@ -14,7 +15,7 @@ public class BGTest1 {
         frame.getContentPane().add("Center",bg);
         frame.pack();
         frame.setSize(150,100);
-        frame.show();
+        frame.setVisible(true);
     }
 
 }

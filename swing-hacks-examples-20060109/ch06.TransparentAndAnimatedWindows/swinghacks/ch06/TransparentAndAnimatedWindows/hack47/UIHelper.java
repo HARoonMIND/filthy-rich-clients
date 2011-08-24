@@ -8,7 +8,7 @@ public final class UIHelper
 {
     public static ImageIcon readImageIcon(String filename)
     {
-        URL url = UIHelper.class.getResource("./images/" + filename);
+        URL url = UIHelper.class.getResource("images/" + filename);
         if (url == null)
             return null;
 

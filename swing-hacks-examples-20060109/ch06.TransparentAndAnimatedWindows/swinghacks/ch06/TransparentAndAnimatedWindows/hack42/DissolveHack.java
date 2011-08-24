@@ -10,6 +10,7 @@ public class DissolveHack {
 	public static void main(String[] args) {
 		
 		final JFrame frame = new JFrame("Dissolve Hack");
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		JButton quit = new JButton("Quit");
 		quit.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent evt) {
