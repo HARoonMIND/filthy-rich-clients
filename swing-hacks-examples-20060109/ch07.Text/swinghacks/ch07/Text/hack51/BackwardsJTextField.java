@@ -1,3 +1,4 @@
+package swinghacks.ch07.Text.hack51;
 import java.awt.*;
 import javax.swing.*;
 import java.awt.geom.*;

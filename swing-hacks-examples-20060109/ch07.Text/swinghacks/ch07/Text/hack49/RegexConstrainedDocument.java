@@ -1,3 +1,4 @@
+package swinghacks.ch07.Text.hack49;
 import javax.swing.text.*;
 import java.util.regex.*;
 

@@ -1,3 +1,4 @@
+package swinghacks.ch07.Text.hack53;
 import javax.swing.RepaintManager;
 import javax.swing.JComponent;
 import java.awt.Container;

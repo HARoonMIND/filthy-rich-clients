@@ -1,6 +1,9 @@
+package swinghacks.ch07.Text.hack53;
 import java.awt.*;
 import java.awt.image.*;
 import javax.swing.*;
+
+import swinghacks.ch01.JComponents.hack11.FullRepaintManager;
 
 public class AntiAliasedPanel extends JPanel {
     

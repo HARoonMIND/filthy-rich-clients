@@ -1,3 +1,4 @@
+package swinghacks.ch07.Text.hack50;
 import java.awt.*;
 import javax.swing.*;
 import javax.swing.event.*;
